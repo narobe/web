@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="dist/style.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body
+    class="font-rubik bg-theme-black light:bg-theme-light text-theme-light text-[1.1rem]"
+  >
+    <div
+      class="rounded-1xl fixed z-20 flex items-center gap-2 p-3 backdrop-blur-md max-sm:top-0 max-sm:right-0 sm:right-0 sm:bottom-0"
+    >
+      <svg
+        class="fill-theme-light light:fill-theme-dark-gray light:on:fill-theme-black on:fill-theme-light h-4"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M284.8 99.2l11 38.6c1 3.6 4.4 6.2 8.2 6.2s7.1-2.5 8.2-6.2l11-38.6 38.6-11c3.6-1 6.2-4.4 6.2-8.2s-2.5-7.1-6.2-8.2l-38.6-11-11-38.6c-1-3.6-4.4-6.2-8.2-6.2s-7.1 2.5-8.2 6.2l-11 38.6-38.6 11c-3.6 1-6.2 4.4-6.2 8.2s2.5 7.1 6.2 8.2l38.6 11zm119 211.6c1.6 5.5 6.6 9.2 12.2 9.2s10.7-3.8 12.2-9.2l16.6-58 58-16.6c5.5-1.6 9.2-6.6 9.2-12.2s-3.8-10.7-9.2-12.2l-58-16.6-16.6-58c-1.6-5.5-6.6-9.2-12.2-9.2s-10.7 3.8-12.2 9.2l-16.6 58-58 16.6c-5.5 1.6-9.2 6.6-9.2 12.2s3.8 10.7 9.2 12.2l58 16.6 16.6 58zM191.8 128C85.8 128 0 214.1 0 320.2S85.8 512.4 191.8 512.4c52 0 99.1-20.7 133.6-54.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-8.1 1.4-16.5 2.2-25.1 2.2c-80.7 0-146.2-65.6-146.2-146.6c0-54.8 30-102.6 74.4-127.8c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-5.4-.5-10.8-.7-16.3-.7z"
+        />
+      </svg>
+      <div
+        id="theme_toggle"
+        class="bg-theme-gray light:justify-end flex h-3.5 w-7 items-center justify-start rounded-full"
+      >
+        <div
+          class="bg-theme-light light:bg-theme-black h-4 w-4 rounded-full"
+        ></div>
+      </div>
+      <svg
+        class="fill-theme-gray light:fill-theme-black h-4"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          d="M256 0c-13.3 0-24 10.7-24 24V88c0 13.3 10.7 24 24 24s24-10.7 24-24V24c0-13.3-10.7-24-24-24zm0 400c-13.3 0-24 10.7-24 24v64c0 13.3 10.7 24 24 24s24-10.7 24-24V424c0-13.3-10.7-24-24-24zM488 280c13.3 0 24-10.7 24-24s-10.7-24-24-24H424c-13.3 0-24 10.7-24 24s10.7 24 24 24h64zM112 256c0-13.3-10.7-24-24-24H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H88c13.3 0 24-10.7 24-24zM437 108.9c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-45.3 45.3c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0L437 108.9zM154.2 357.8c-9.4-9.4-24.6-9.4-33.9 0L75 403.1c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l45.3-45.3c9.4-9.4 9.4-24.6 0-33.9zM403.1 437c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-45.3-45.3c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9L403.1 437zM154.2 154.2c9.4-9.4 9.4-24.6 0-33.9L108.9 75c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l45.3 45.3c9.4 9.4 24.6 9.4 33.9 0zM256 368a112 112 0 1 0 0-224 112 112 0 1 0 0 224z"
+        />
+      </svg>
+    </div>
+    <nav
+      class="relative bottom-0 flex w-full justify-center py-8 max-sm:fixed max-sm:py-2"
+    >
+      <div
+        id="nav-items"
+        class="flex place-items-center items-center justify-between gap-16 max-sm:w-full max-sm:gap-0 max-sm:px-4 md:gap-24"
+      >
+        <div
+          href="#section-home"
+          id="nav-item-wrap"
+          class="cursor-pointer max-sm:p-2"
+        >
+          <div id="nav-item" data-i="1" class="on flex items-center gap-2">
+            <div class="h-4">
+              <svg
+                class="fill-theme-gray light:on:fill-theme-black on:fill-theme-light h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                />
+              </svg>
+            </div>
+            <span
+              class="text-theme-gray on:text-theme-light light:on:text-theme-black on:not-italic max-sm:on:block italic max-sm:hidden"
+              >home</span
+            >
+          </div>
+          <div
+            id="nav-indicator"
+            class="via-theme-primary to-tranfrom-transparent -mb-1 -ml-[50%] h-1 w-[200%] bg-gradient-to-r from-transparent from-10% to-90%"
+          ></div>
+        </div>
+        <div
+          href="#section-about"
+          id="nav-item-wrap"
+          class="cursor-pointer max-sm:p-2"
+        >
+          <div id="nav-item" data-i="2" class="flex items-center gap-2">
+            <div class="h-4">
+              <svg
+                class="fill-theme-gray light:on:fill-theme-black on:fill-theme-light h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                />
+              </svg>
+            </div>
+            <span
+              class="text-theme-gray on:text-theme-light light:on:text-theme-black on:not-italic max-sm:on:block italic max-sm:hidden"
+              >about</span
+            >
+          </div>
+        </div>
+        <div
+          href="#section-tools"
+          id="nav-item-wrap"
+          class="cursor-pointer max-sm:p-2"
+        >
+          <div id="nav-item" data-i="3" class="flex items-center gap-2">
+            <div class="h-4">
+              <svg
+                class="fill-theme-gray light:on:fill-theme-black on:fill-theme-light h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+                />
+              </svg>
+            </div>
+            <span
+              class="text-theme-gray on:text-theme-light light:on:text-theme-black on:not-italic max-sm:on:block italic max-sm:hidden"
+              >tools</span
+            >
+          </div>
+        </div>
+        <div
+          href="#section-projects"
+          id="nav-item-wrap"
+          class="cursor-pointer max-sm:p-2"
+        >
+          <div id="nav-item" data-i="4" class="flex items-center gap-2">
+            <div class="h-4">
+              <svg
+                class="fill-theme-gray light:on:fill-theme-black on:fill-theme-light h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M15.5 275.9L192 320l44.1 176.5c2.3 9.1 10.5 15.5 19.9 15.5s17.6-6.4 19.9-15.5L320 320l176.5-44.1c9.1-2.3 15.5-10.5 15.5-19.9s-6.4-17.6-15.5-19.9L320 192 275.9 15.5C273.6 6.4 265.4 0 256 0s-17.6 6.4-19.9 15.5L192 192 15.5 236.1C6.4 238.4 0 246.6 0 256s6.4 17.6 15.5 19.9zM71 71c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L105 71c-9.4-9.4-24.6-9.4-33.9 0zM441 71c-9.4-9.4-24.6-9.4-33.9 0l-48 48c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9zm0 336l-48-48c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9zM71 441c9.4 9.4 24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L71 407c-9.4 9.4-9.4 24.6 0 33.9z"
+                />
+              </svg>
+            </div>
+            <span
+              class="text-theme-gray on:text-theme-light light:on:text-theme-black on:not-italic max-sm:on:block italic max-sm:hidden"
+              >projects</span
+            >
+          </div>
+        </div>
+        <div
+          href="#section-contact"
+          id="nav-item-wrap"
+          class="cursor-pointer max-sm:p-2"
+        >
+          <div id="nav-item" data-i="5" class="flex items-center gap-2">
+            <div class="h-4">
+              <svg
+                class="fill-theme-gray light:on:fill-theme-black on:fill-theme-light h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z"
+                />
+              </svg>
+            </div>
+            <span
+              class="text-theme-gray on:text-theme-light light:on:text-theme-black on:not-italic max-sm:on:block italic max-sm:hidden"
+              >contact</span
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section
+      data-navlink="home"
+      id="section-home"
+      class="mx-auto flex min-h-screen max-w-[1366px] justify-center gap-[5%] px-[10%] pt-32 pb-12 max-sm:flex-col max-sm:px-[4%]"
+    >
+      <div class="grow">
+        <div style="margin-bottom: 4rem">
+          <h2 class="light:text-theme-black text-5xl font-semibold">Narobe</h2>
+          <p
+            class="text-theme-light-gray light:text-theme-dark-gray light:font-normal font-light"
+          >
+            Website Developer
+          </p>
+        </div>
+        <p class="text-theme-gray italic">
+          I craft beautiful and functional websites
+        </p>
+      </div>
+      <div class="grow"></div>
+    </section>
+
+    <section
+      data-navlink="about"
+      id="section-about"
+      class="mx-auto flex min-h-screen max-w-[1366px] justify-center gap-[5%] px-[10%] pt-32 pb-12 max-sm:flex-col max-sm:px-[4%]"
+    >
+      <div class="w-full grow">
+        <h2 class="light:text-theme-black text-5xl font-semibold">About me</h2>
+        <p
+          class="text-theme-light-gray light:text-theme-dark-gray light:font-normal font-light"
+        >
+          I am a professional IT person and designer with a strong teamwork and
+          problem solving skill. As a recent Graduate with a strong foundation
+          with ICT I’m eager to apply my skills in a dynamic environment.
+        </p>
+      </div>
+      <div class="w-full grow">
+        <div class="space-y-4">
+          <h2 class="light:text-theme-black text-5xl font-semibold">
+            Education
+          </h2>
+          <div class="space-y-0.5">
+            <p class="text-theme-primary text-sm">High School</p>
+            <p
+              class="text-theme-light light:text-theme-black light:font-normal font-light"
+            >
+              Medhanealem Preparatory School
+            </p>
+          </div>
+          <div class="space-y-0.5">
+            <p class="text-theme-primary text-sm">College</p>
+            <p
+              class="text-theme-light light:text-theme-black light:font-normal font-light"
+            >
+              General Wingate PTC - level IV Diploma
+            </p>
+            <p
+              class="text-theme-gray light:text-theme-dark-gray text-sm italic"
+            >
+              Web development & Database adminstration
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-navlink="tools"
+      id="section-tools"
+      class="max-w-[1366px mx-auto flex min-h-screen justify-center gap-[5%]] px-[10%] pt-32 pb-12 max-sm:px-[4%]"
+      max-sm:flex-col
+    >
+      <div class="w-full">
+        <h2 class="light:text-theme-black text-5xl font-semibold">
+          Skills & tools
+        </h2>
+        <div class="grid grid-cols-2 gap-12 max-sm:grid-cols-1">
+          <div class="tool">
+            <div class="flex items-center gap-2">
+              <div class="h-4">
+                <svg
+                  class="fill-theme-primary h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M504.4,115.83a5.72,5.72,0,0,0-.28-.68,8.52,8.52,0,0,0-.53-1.25,6,6,0,0,0-.54-.71,9.36,9.36,0,0,0-.72-.94c-.23-.22-.52-.4-.77-.6a8.84,8.84,0,0,0-.9-.68L404.4,55.55a8,8,0,0,0-8,0L300.12,111h0a8.07,8.07,0,0,0-.88.69,7.68,7.68,0,0,0-.78.6,8.23,8.23,0,0,0-.72.93c-.17.24-.39.45-.54.71a9.7,9.7,0,0,0-.52,1.25c-.08.23-.21.44-.28.68a8.08,8.08,0,0,0-.28,2.08V223.18l-80.22,46.19V63.44a7.8,7.8,0,0,0-.28-2.09c-.06-.24-.2-.45-.28-.68a8.35,8.35,0,0,0-.52-1.24c-.14-.26-.37-.47-.54-.72a9.36,9.36,0,0,0-.72-.94,9.46,9.46,0,0,0-.78-.6,9.8,9.8,0,0,0-.88-.68h0L115.61,1.07a8,8,0,0,0-8,0L11.34,56.49h0a6.52,6.52,0,0,0-.88.69,7.81,7.81,0,0,0-.79.6,8.15,8.15,0,0,0-.71.93c-.18.25-.4.46-.55.72a7.88,7.88,0,0,0-.51,1.24,6.46,6.46,0,0,0-.29.67,8.18,8.18,0,0,0-.28,2.1v329.7a8,8,0,0,0,4,6.95l192.5,110.84a8.83,8.83,0,0,0,1.33.54c.21.08.41.2.63.26a7.92,7.92,0,0,0,4.1,0c.2-.05.37-.16.55-.22a8.6,8.6,0,0,0,1.4-.58L404.4,400.09a8,8,0,0,0,4-6.95V287.88l92.24-53.11a8,8,0,0,0,4-7V117.92A8.63,8.63,0,0,0,504.4,115.83ZM111.6,17.28h0l80.19,46.15-80.2,46.18L31.41,63.44Zm88.25,60V278.6l-46.53,26.79-33.69,19.4V123.5l46.53-26.79Zm0,412.78L23.37,388.5V77.32L57.06,96.7l46.52,26.8V338.68a6.94,6.94,0,0,0,.12.9,8,8,0,0,0,.16,1.18h0a5.92,5.92,0,0,0,.38.9,6.38,6.38,0,0,0,.42,1v0a8.54,8.54,0,0,0,.6.78,7.62,7.62,0,0,0,.66.84l0,0c.23.22.52.38.77.58a8.93,8.93,0,0,0,.86.66l0,0,0,0,92.19,52.18Zm8-106.17-80.06-45.32,84.09-48.41,92.26-53.11,80.13,46.13-58.8,33.56Zm184.52,4.57L215.88,490.11V397.8L346.6,323.2l45.77-26.15Zm0-119.13L358.68,250l-46.53-26.79V131.79l33.69,19.4L392.37,178Zm8-105.28-80.2-46.17,80.2-46.16,80.18,46.15Zm8,105.28V178L455,151.19l33.68-19.4v91.39h0Z"
+                  />
+                </svg>
+              </div>
+              <span class="font-light">Laravel</span>
+            </div>
+            <div class="skill-bar">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item decent"></div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>Building full Stack apps</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tool">
+            <div class="flex items-center gap-2">
+              <div class="h-4">
+                <svg
+                  class="fill-theme-primary h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 384 512"
+                >
+                  `
+                  <path
+                    d="M14 95.7924C14 42.8877 56.8878 0 109.793 0H274.161C327.066 0 369.954 42.8877 369.954 95.7924C369.954 129.292 352.758 158.776 326.711 175.897C352.758 193.019 369.954 222.502 369.954 256.002C369.954 308.907 327.066 351.795 274.161 351.795H272.081C247.279 351.795 224.678 342.369 207.666 326.904V415.167C207.666 468.777 163.657 512 110.309 512C57.5361 512 14 469.243 14 416.207C14 382.709 31.1945 353.227 57.2392 336.105C31.1945 318.983 14 289.5 14 256.002C14 222.502 31.196 193.019 57.2425 175.897C31.196 158.776 14 129.292 14 95.7924ZM176.288 191.587H109.793C74.2172 191.587 45.3778 220.427 45.3778 256.002C45.3778 291.44 73.9948 320.194 109.381 320.416C109.518 320.415 109.655 320.415 109.793 320.415H176.288V191.587ZM207.666 256.002C207.666 291.577 236.505 320.417 272.081 320.417H274.161C309.737 320.417 338.576 291.577 338.576 256.002C338.576 220.427 309.737 191.587 274.161 191.587H272.081C236.505 191.587 207.666 220.427 207.666 256.002ZM109.793 351.795C109.655 351.795 109.518 351.794 109.381 351.794C73.9948 352.015 45.3778 380.769 45.3778 416.207C45.3778 451.652 74.6025 480.622 110.309 480.622C146.591 480.622 176.288 451.186 176.288 415.167V351.795H109.793ZM109.793 31.3778C74.2172 31.3778 45.3778 60.2173 45.3778 95.7924C45.3778 131.368 74.2172 160.207 109.793 160.207H176.288V31.3778H109.793ZM207.666 160.207H274.161C309.737 160.207 338.576 131.368 338.576 95.7924C338.576 60.2173 309.737 31.3778 274.161 31.3778H207.666V160.207Z"
+                  />
+                </svg>
+              </div>
+              <span class="font-light">UI / UX</span>
+            </div>
+            <div class="skill-bar">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item decent"></div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>Lorem ipsum dolor sit.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tool">
+            <div class="flex items-center gap-2">
+              <div class="h-4">
+                <svg
+                  class="fill-theme-primary h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z"
+                  />
+                </svg>
+              </div>
+              <span class="font-light">JavaScript</span>
+            </div>
+            <div class="skill-bar">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item decent"></div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>Lorem ipsum dolor sit.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tool">
+            <div class="flex items-center gap-2">
+              <div class="h-4">
+                <svg
+                  class="fill-theme-primary h-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                >
+                  <path
+                    d="M400 86v88.7c-13.3 7.2-31.6 14.2-54.8 19.9C311.3 203 269.5 208 224 208s-87.3-5-121.2-13.4C79.6 188.9 61.3 182 48 174.7V86l.6-.5C53.9 81 64.5 74.8 81.8 68.6C115.9 56.5 166.2 48 224 48s108.1 8.5 142.2 20.6c17.3 6.2 27.8 12.4 33.2 16.9l.6 .5zm0 141.5v75.2c-13.3 7.2-31.6 14.2-54.8 19.9C311.3 331 269.5 336 224 336s-87.3-5-121.2-13.4C79.6 316.9 61.3 310 48 302.7V227.6c13.3 5.3 27.9 9.9 43.3 13.7C129.5 250.6 175.2 256 224 256s94.5-5.4 132.7-14.8c15.4-3.8 30-8.3 43.3-13.7zM48 426V355.6c13.3 5.3 27.9 9.9 43.3 13.7C129.5 378.6 175.2 384 224 384s94.5-5.4 132.7-14.8c15.4-3.8 30-8.3 43.3-13.7V426l-.6 .5c-5.3 4.5-15.9 10.7-33.2 16.9C332.1 455.5 281.8 464 224 464s-108.1-8.5-142.2-20.6c-17.3-6.2-27.8-12.4-33.2-16.9L48 426zm354.1-2.1s0 .1-.2 .2l.1-.2 0-.1zm-356.1 0a.3 .3 0 1 0 .6-.2 .3 .3 0 1 0 -.6 .2zm0-335.8a.3 .3 0 1 0 .5 .2 .3 .3 0 1 0 -.5-.2zm356-.2a.3 .3 0 1 0 -.1 .6 .3 .3 0 1 0 .1-.6zM448 432V80C448 35.8 347.7 0 224 0S0 35.8 0 80V432c0 44.2 100.3 80 224 80s224-35.8 224-80z"
+                  />
+                </svg>
+              </div>
+              <span class="font-light">SQL</span>
+            </div>
+            <div class="skill-bar">
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item"></div>
+              <div class="item decent"></div>
+            </div>
+            <div class="body">
+              <ul>
+                <li>Lorem ipsum dolor sit.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section
+      data-navlink="projects"
+      id="section-projects"
+      class="min-h-screen flex justify-center px-[10%] max-sm:px-[4%] max-w-[1366px mx-auto pt-32 pb-12 gap-[5%]]" max-sm:flex-col
+    >
+      <div class="item">
+        <h2 class="light:text-theme-black text-5xl font-semibold">projects</h2>
+        <div class="projects">
+          <div class="project">
+            <div class="info info-first">
+              <div class="title">
+                <span class="name">one of the projects</span>
+                <div class="link">
+                  <a href="https://github.com/narobe/simple-store">
+                    Source Code</a
+                  >
+                  <div class="h-4">
+                    <svg
+                      class="h-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="image">
+                <img
+                  id="project-image"
+                  src="asset/ecom_shot.png"
+                  alt="Laravel project screenshot"
+                />
+                <div class="smalls">
+                  <div
+                    id="image-preview"
+                    class="small"
+                    data-src="/asset/ecom_shot.png"
+                    style="background-image: url(/asset/ecom_shot.png)"
+                  ></div>
+                  <div
+                    id="image-preview"
+                    class="small"
+                    data-src="/asset/Screenshot_10.png"
+                    style="background-image: url(/asset/Screenshot_10.png)"
+                  ></div>
+                  <div
+                    id="image-preview"
+                    class="small"
+                    data-src="/asset/Screenshot_8.png"
+                    style="background-image: url(/asset/Screenshot_8.png)"
+                  ></div>
+                  <div
+                    id="image-preview"
+                    class="small"
+                    data-src="/asset/Screenshot_4.png"
+                    style="background-image: url(/asset/Screenshot_4.png)"
+                  ></div>
+                </div>
+              </div>
+            </div>
+            <div class="info info-second">
+              <div class="title">
+                <span class="name">one of the projects </span>
+                <div class="link">
+                  <a href="https://github.com/narobe/simple-store">
+                    Source Code</a
+                  >
+                  <div class="h-4">
+                    <svg
+                      class="h-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                    >
+                      <path
+                        d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <p class="body">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- <section
+      data-navlink="contact"
+      id="section-contact"
+      class="min-h-screen flex justify-center px-[10%] max-sm:px-[4%] max-w-[1366px mx-auto pt-32 pb-12 gap-[5%]]" max-sm:flex-col
+    >
+      <div class="item">
+        <h2 class="light:text-theme-black text-5xl font-semibold">Get in touch</h2>
+        <div class="addreses">
+          <div class="address">
+            <div class="h-4">
+              <svg
+                class="h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 496 512"
+              >
+                <path
+                  d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"
+                />
+              </svg>
+            </div>
+            <a href="https://t.me/sylenthique" class="link">@sylenthique</a>
+          </div>
+          <div class="address">
+            <div class="h-4">
+              <svg
+                class="h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"
+                />
+              </svg>
+            </div>
+            <a href="tel:0964534544">0964534544</a>
+          </div>
+          <div class="address">
+            <div class="h-4">
+              <svg
+                class="h-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                />
+              </svg>
+            </div>
+            <a href="mailto:narobekenea@gmail.com">narobekenea@gmail.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <form>
+          <div class="form-field">
+            <label for="name">name</label>
+            <input id="name" name="name" type="text" />
+          </div>
+          <div class="form-field">
+            <label for="address">email & phone</label>
+            <input id="address" name="address" type="text" required />
+          </div>
+          <div class="form-field">
+            <label for="message">message</label>
+            <textarea name="message" id="message" required></textarea>
+          </div>
+          <button>send</button>
+        </form>
+      </div>
+    </section> -->
+    <script src="./dist/js/app.js"></script>
+  </body>
+</html>

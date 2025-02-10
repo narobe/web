@@ -20,13 +20,13 @@
       <!-- HEADER -->
       <!-- HEADER -->
       <div
-        class="border-theme-112 light:border-theme-121 flex justify-center border-t-2 border-b-2"
+        class="border-theme-112 light:border-theme-121 flex justify-center border-t-2 border-b-2 max-sm:border-0"
       >
-        <!-- NAV -->
-        <!-- NAV -->
-        <!-- NAV -->
+        <!-- NAV DESKTOP -->
+        <!-- NAV DESKTOP -->
+        <!-- NAV DESKTOP -->
         <div
-          class="--nav-- border-theme-112 light:border-theme-121 flex w-full items-center justify-between border-r-2 py-4 pr-8"
+          class="--nav-- border-theme-112 light:border-theme-121 flex w-full items-center justify-between border-r-2 py-4 pr-8 max-sm:hidden"
         >
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
@@ -324,10 +324,313 @@
             >
           </div>
         </div>
+        <!-- NAV MOBILE -->
+        <!-- NAV MOBILE -->
+        <!-- NAV MOBILE -->
+        <div
+          class="--nav-- --mobile-- fixed bottom-0 flex w-full items-center justify-between p-4 sm:hidden"
+        >
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <div
+            data-href="home"
+            class="--navitem-- --mobile-- on relative flex items-center gap-2 p-2"
+          >
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 left-0 h-2.5 w-2.5">
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute bottom-0 left-0 h-2.5 w-2.5 rotate-270">
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute right-0 bottom-0 h-2.5 w-2.5 rotate-180">
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 right-0 h-2.5 w-2.5 rotate-90">
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 bg-theme-66 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <div>
+              <svg
+                class="fill-theme-121 on:fill-theme-222 light:on:fill-theme-30 h-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 576 512"
+              >
+                <path
+                  d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                />
+              </svg>
+            </div>
+            <span
+              class="light:text-theme-30 text-theme-222 on:block hidden leading-0"
+              >home</span
+            >
+          </div>
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <div
+            data-href="about"
+            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+          >
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 left-0 h-2.5 w-2.5">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute bottom-0 left-0 h-2.5 w-2.5 rotate-270">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute right-0 bottom-0 h-2.5 w-2.5 rotate-180">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 right-0 h-2.5 w-2.5 rotate-90">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <div>
+              <svg
+                class="fill-theme-121 on:fill-theme-222 light:on:fill-theme-30 h-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
+              >
+                <path
+                  d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                />
+              </svg>
+            </div>
+            <span
+              class="light:text-theme-30 text-theme-222 on:block hidden leading-0"
+              >about</span
+            >
+          </div>
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <div
+            data-href="tools"
+            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+          >
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 left-0 h-2.5 w-2.5">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute bottom-0 left-0 h-2.5 w-2.5 rotate-270">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute right-0 bottom-0 h-2.5 w-2.5 rotate-180">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 right-0 h-2.5 w-2.5 rotate-90">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <div>
+              <svg
+                class="fill-theme-121 on:fill-theme-222 light:on:fill-theme-30 h-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M78.6 5C69.1-2.4 55.6-1.5 47 7L7 47c-8.5 8.5-9.4 22-2.1 31.6l80 104c4.5 5.9 11.6 9.4 19 9.4h54.1l109 109c-14.7 29-10 65.4 14.3 89.6l112 112c12.5 12.5 32.8 12.5 45.3 0l64-64c12.5-12.5 12.5-32.8 0-45.3l-112-112c-24.2-24.2-60.6-29-89.6-14.3l-109-109V104c0-7.5-3.5-14.5-9.4-19L78.6 5zM19.9 396.1C7.2 408.8 0 426.1 0 444.1C0 481.6 30.4 512 67.9 512c18 0 35.3-7.2 48-19.9L233.7 374.3c-7.8-20.9-9-43.6-3.6-65.1l-61.7-61.7L19.9 396.1zM512 144c0-10.5-1.1-20.7-3.2-30.5c-2.4-11.2-16.1-14.1-24.2-6l-63.9 63.9c-3 3-7.1 4.7-11.3 4.7H352c-8.8 0-16-7.2-16-16V102.6c0-4.2 1.7-8.3 4.7-11.3l63.9-63.9c8.1-8.1 5.2-21.8-6-24.2C388.7 1.1 378.5 0 368 0C288.5 0 224 64.5 224 144l0 .8 85.3 85.3c36-9.1 75.8 .5 104 28.7L429 274.5c49-23 83-72.8 83-130.5zM56 432a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"
+                />
+              </svg>
+            </div>
+            <span
+              class="light:text-theme-30 text-theme-222 on:block hidden leading-0"
+              >tools</span
+            >
+          </div>
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <div
+            data-href="projects"
+            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+          >
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 left-0 h-2.5 w-2.5">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute bottom-0 left-0 h-2.5 w-2.5 rotate-270">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute right-0 bottom-0 h-2.5 w-2.5 rotate-180">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 right-0 h-2.5 w-2.5 rotate-90">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <div>
+              <svg
+                class="fill-theme-121 on:fill-theme-222 light:on:fill-theme-30 h-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M15.5 275.9L192 320l44.1 176.5c2.3 9.1 10.5 15.5 19.9 15.5s17.6-6.4 19.9-15.5L320 320l176.5-44.1c9.1-2.3 15.5-10.5 15.5-19.9s-6.4-17.6-15.5-19.9L320 192 275.9 15.5C273.6 6.4 265.4 0 256 0s-17.6 6.4-19.9 15.5L192 192 15.5 236.1C6.4 238.4 0 246.6 0 256s6.4 17.6 15.5 19.9zM71 71c-9.4 9.4-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9L105 71c-9.4-9.4-24.6-9.4-33.9 0zM441 71c-9.4-9.4-24.6-9.4-33.9 0l-48 48c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9zm0 336l-48-48c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l48 48c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9zM71 441c9.4 9.4 24.6 9.4 33.9 0l48-48c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0L71 407c-9.4 9.4-9.4 24.6 0 33.9z"
+                />
+              </svg>
+            </div>
+            <span
+              class="light:text-theme-30 text-theme-222 on:block hidden leading-0"
+              >projects</span
+            >
+          </div>
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <!-- NAV ELEMENT -->
+          <div
+            data-href="contact"
+            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+          >
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 left-0 h-2.5 w-2.5">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute bottom-0 left-0 h-2.5 w-2.5 rotate-270">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute right-0 bottom-0 h-2.5 w-2.5 rotate-180">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <!-- NAV ITEM EDGE -->
+            <div class="absolute top-0 right-0 h-2.5 w-2.5 rotate-90">
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-0.5 w-full border-0"
+              />
+              <hr
+                class="bg-theme-66 on:bg-theme-121 light:on:bg-theme-66 light:bg-theme-121 absolute h-full w-0.5 border-0"
+              />
+            </div>
+            <div>
+              <svg
+                class="fill-theme-121 on:fill-theme-222 light:on:fill-theme-30 h-3.5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z"
+                />
+              </svg>
+            </div>
+            <span
+              class="light:text-theme-30 text-theme-222 on:block hidden leading-0"
+              >contact</span
+            >
+          </div>
+        </div>
+
         <!-- THEME -->
         <!-- THEME -->
         <!-- THEME -->
-        <div class="flex w-full items-center pl-8">
+        <div class="flex w-full items-center pl-8 max-sm:pl-0">
           <!-- INNER -->
           <div class="flex w-full justify-between gap-4">
             <!-- SUN ICON -->

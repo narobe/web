@@ -9,12 +9,13 @@
   --color-theme-dark-gray: hsl(164, 15%, 35%);
   --color-theme-light: hsl(164, 28%, 90%); */
   /* ... */
-  --color-theme-f: rgb(252, 252, 252);
-  --color-theme-e: rgb(222, 222, 222);
-  --color-theme-d: rgb(121, 121, 121);
-  --color-theme-c: rgb(112, 112, 112);
-  --color-theme-b: rgb(66, 66, 66);
-  --color-theme-a: rgb(30, 30, 30);
+  --color-theme-252: rgb(252, 252, 252);
+  --color-theme-222: rgb(222, 222, 222);
+  --color-theme-181: rgb(181, 181, 181);
+  --color-theme-121: rgb(121, 121, 121);
+  --color-theme-112: rgb(112, 112, 112);
+  --color-theme-66: rgb(66, 66, 66);
+  --color-theme-30: rgb(30, 30, 30);
 }
 *::selection {
   background: hsl(164, 71%, 52%);

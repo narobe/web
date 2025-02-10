@@ -18,11 +18,15 @@
   --color-theme-30: rgb(30, 30, 30);
 }
 *::selection {
-  background: hsl(164, 71%, 52%);
-  color: black;
+  background: var(--color-theme-181);
+  color: var(--color-theme-30);
+}
+.light *::selection {
+  color: var(--color-theme-181);
+  background: var(--color-theme-30);
 }
 body::-webkit-scrollbar {
-  width: 2px;
+  width: 4px;
 }
 body::-webkit-scrollbar-track {
   background-color: transparent;
@@ -31,11 +35,16 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(
     to bottom,
     transparent,
+    var(--color-theme-181),
+    transparent
+  );
+  border-radius: 10px;
+}
+.light body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
     transparent,
-    transparent,
-    hsl(164, 71%, 52%),
-    transparent,
-    transparent,
+    var(--color-theme-30),
     transparent
   );
   border-radius: 10px;

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
     <link rel="stylesheet" href="dist/style.css" />
-    <script defer src="app.js"></script>
   </head>
   <body class="bg-theme-a font-rubik text-[1.1rem]">
     <!-- HERO -->
@@ -20,12 +19,15 @@
         <!-- NAV -->
         <!-- NAV -->
         <div
-          class="border-theme-d flex w-full items-center justify-between border-r-2 py-4 pr-8"
+          class="--nav-- border-theme-d flex w-full items-center justify-between border-r-2 py-4 pr-8"
         >
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
-          <div class="on relative flex items-center gap-2 p-2">
+          <div
+            data-href="home"
+            class="--navitem-- on relative flex items-center gap-2 p-2"
+          >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
               <hr
@@ -78,7 +80,10 @@
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
-          <div class="relative flex items-center gap-2 p-2">
+          <div
+            data-href="about"
+            class="--navitem-- relative flex items-center gap-2 p-2"
+          >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
               <hr
@@ -131,7 +136,10 @@
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
-          <div class="relative flex items-center gap-2 p-2">
+          <div
+            data-href="tools"
+            class="--navitem-- relative flex items-center gap-2 p-2"
+          >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
               <hr
@@ -184,7 +192,10 @@
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
-          <div class="relative flex items-center gap-2 p-2">
+          <div
+            data-href="projects"
+            class="--navitem-- relative flex items-center gap-2 p-2"
+          >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
               <hr
@@ -237,7 +248,10 @@
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
           <!-- NAV ELEMENT -->
-          <div class="relative flex items-center gap-2 p-2">
+          <div
+            data-href="contact"
+            class="--navitem-- relative flex items-center gap-2 p-2"
+          >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
               <hr
@@ -294,5 +308,6 @@
         <div class="w-full"></div>
       </div>
     </div>
+    <script src="./dist/js/nav.js"></script>
   </body>
 </html>

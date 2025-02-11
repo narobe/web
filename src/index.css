@@ -17,6 +17,10 @@
   --color-theme-66: rgb(66, 66, 66);
   --color-theme-30: rgb(30, 30, 30);
 }
+
+@custom-variant light (&:where(.light, .light *));
+@custom-variant on (&:where(.on, .on *));
+
 *::selection {
   background: var(--color-theme-181);
   color: var(--color-theme-30);
@@ -49,6 +53,16 @@ body::-webkit-scrollbar-thumb {
   );
   border-radius: 10px;
 }
-
-@custom-variant light (&:where(.light, .light *));
-@custom-variant on (&:where(.on, .on *));
+.---marquee-item--- {
+  animation-name: slide;
+  animation-duration: 56s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+@keyframes slide {
+  100% {
+    transform: translateX(-100%);
+  }
+}

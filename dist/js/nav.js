@@ -1,4 +1,5 @@
 const navItem = document.querySelectorAll(".--navitem--:not(.--mobile--)");
+const sections = document.querySelectorAll(".--section--");
 const mobileNavItem = document.querySelectorAll(".--navitem--.--mobile--");
 const navItemActive = document.querySelector(
   ".--navitem--:not(.--mobile--).on",
@@ -29,8 +30,14 @@ function navEvent(el, mob = false) {
   });
   el.classList.add("on");
 }
-navEvent(mobileNavItemActive, true ?? null);
-navEvent(navItemActive ?? null);
+function scrollToSection(el) {
+  el.addEventListener("click", (e) => {
+    const targetSection = e.target.closest(".--navitem--").dataset.href;
+    document
+      .querySelector(`.--section-${targetSection}--`)
+      .scrollIntoView({ behavior: "smooth" });
+  });
+}
 
 nav.addEventListener("click", (e) => {
   navEvent(e.target.closest(".--navitem--"));
@@ -39,11 +46,30 @@ mobileNav.addEventListener("click", (e) => {
   navEvent(e.target.closest(".--navitem--"), true);
 });
 
-// navItem.forEach((item) => {
-// item.addEventListener("click", (e) => {
-// const targetSection = e.target.closest(".--navitem--").dataset.href;
-// document
-//   .querySelector(`.--section${targetSection}--`)
-//   .scrollIntoView({ behavior: "smooth" });
-// });
-// });
+navItem.forEach((item) => {
+  scrollToSection(item);
+});
+mobileNavItem.forEach((item) => {
+  scrollToSection(item);
+});
+
+sections.forEach((section) => {
+  function observed(entries) {
+    const [entry] = entries;
+    const current = section.dataset.nav;
+    let windowWidth = window.innerWidth <= 768;
+    if (entry.isIntersecting) {
+      navEvent(
+        windowWidth
+          ? document.querySelector(`.--navitem-${current}--.--mobile--`)
+          : document.querySelector(`.--navitem-${current}--`),
+        windowWidth,
+      );
+    }
+  }
+  const navObserver = new IntersectionObserver(observed, {
+    root: null,
+    threshold: 0.5,
+  });
+  navObserver.observe(section);
+});

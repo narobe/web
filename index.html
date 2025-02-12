@@ -12,19 +12,20 @@
     <link rel="stylesheet" href="dist/style.css" />
   </head>
   <body
-    class="bg-theme-30 light:bg-theme-222 font-rubik min-h-screen text-[1.1rem]"
+    class="bg-theme-30 light:bg-theme-222 font-rubik min-min-h-screen text-[1.1rem]"
   >
-    <!-- HERO -->
-    <!-- HERO -->
-    <!-- HERO -->
+    <!-- HOME -->
+    <!-- HOME -->
+    <!-- HOME -->
     <div
-      class="flex h-screen flex-col justify-between py-4 max-sm:pb-[10vh] sm:px-8"
+      data-nav="home"
+      class="--section-- --section-home-- flex min-h-screen flex-col justify-between pt-0 pb-4 max-sm:pb-[10vh] sm:px-8"
     >
       <!-- HEADER -->
       <!-- HEADER -->
       <!-- HEADER -->
       <div
-        class="border-theme-112 light:border-theme-121 flex justify-center border-t-2 border-b-2 max-sm:border-0"
+        class="bg-theme-30 light:bg-theme-222 border-theme-112 light:border-theme-121 fixed flex w-full justify-center border-t-2 border-b-2 max-sm:border-0 sm:-ml-8"
       >
         <!-- NAV DESKTOP -->
         <!-- NAV DESKTOP -->
@@ -37,7 +38,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="home"
-            class="--navitem-- on relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-home-- on relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -96,7 +97,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="about"
-            class="--navitem-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-about-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -155,7 +156,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="tools"
-            class="--navitem-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-tools-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -214,7 +215,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="projects"
-            class="--navitem-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-projects-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -273,7 +274,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="contact"
-            class="--navitem-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-contact-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -339,7 +340,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="home"
-            class="--navitem-- --mobile-- on relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-home-- --mobile-- on relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -398,7 +399,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="about"
-            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-about-- --mobile-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -457,7 +458,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="tools"
-            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-tools-- --mobile-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -516,7 +517,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="projects"
-            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-projects-- --mobile-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -575,7 +576,7 @@
           <!-- NAV ELEMENT -->
           <div
             data-href="contact"
-            class="--navitem-- --mobile-- relative flex items-center gap-2 p-2"
+            class="--navitem-- --navitem-contact-- --mobile-- relative flex items-center gap-2 p-2"
           >
             <!-- NAV ITEM EDGE -->
             <div class="absolute top-0 left-0 h-2.5 w-2.5">
@@ -634,7 +635,9 @@
         <!-- THEME -->
         <!-- THEME -->
         <!-- THEME -->
-        <div class="flex w-full items-center max-sm:mb-4 max-sm:px-2 sm:pl-8">
+        <div
+          class="z-50 flex w-full items-center max-sm:mb-4 max-sm:px-2 max-sm:pt-2 sm:pl-8"
+        >
           <!-- INNER -->
           <div class="flex w-full justify-between gap-4">
             <!-- SUN ICON -->
@@ -656,7 +659,7 @@
             <!-- SWITCH -->
             <!-- SWITCH -->
             <div
-              class="--themetoggle-- light:bg-theme-181 bg-theme-66 relative flex h-5 w-full items-center justify-center rounded-full"
+              class="--themetoggle-- light:bg-theme-181 bg-theme-66 relative flex h-5 w-full cursor-pointer items-center justify-center rounded-full"
             >
               <div
                 class="light:left-0 bg-theme-222 light:bg-theme-30 absolute right-0 h-5 w-5 rounded-full"
@@ -687,58 +690,36 @@
       <!-- ADDRESS MOBILE -->
       <!-- ADDRESS MOBILE -->
       <!-- ADDRESS MOBILE -->
-      <div class="-mt-[12vh] w-full px-2 sm:hidden">
+      <div class="hidden w-full px-2 max-md:block max-sm:-mt-[12vh]">
         <!-- ADDRESS GRID -->
         <!-- ADDRESS GRID -->
         <!-- ADDRESS GRID -->
         <div class="grid grid-cols-8 grid-rows-2 items-center gap-y-1">
           <div class="col-span-2 flex items-center justify-between gap-4">
             <span class="text-theme-252 light:text-theme-30">MAIL </span>
-            <div class="">
-              <svg
-                class="fill-theme-252 light:fill-theme-30 h-3.5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 11.999"
-              >
-                <path
-                  id="arrow-down"
-                  d="M5.535,45.769a.755.755,0,0,0,1.088,0l5.25-5.5a.749.749,0,1,0-1.084-1.034L6.829,43.378V26.75a.75.75,0,0,0-1.5,0V43.378L1.373,39.231A.749.749,0,1,0,.288,40.266l5.25,5.5Z"
-                  transform="translate(-26 12.081) rotate(-90)"
-                />
-              </svg>
-            </div>
+            <div class="--arrow-icon--"></div>
           </div>
-          <span
+          <a
+            href="mailto:narobekenea@gmail.com"
             class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
             >narobekenea@gmail.com
-          </span>
+          </a>
           <div class="col-span-2 flex items-center justify-between gap-4">
             <span class="text-theme-252 light:text-theme-30">TEL </span>
-            <div class="">
-              <svg
-                class="fill-theme-252 light:fill-theme-30 h-3.5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 11.999"
-              >
-                <path
-                  id="arrow-down"
-                  d="M5.535,45.769a.755.755,0,0,0,1.088,0l5.25-5.5a.749.749,0,1,0-1.084-1.034L6.829,43.378V26.75a.75.75,0,0,0-1.5,0V43.378L1.373,39.231A.749.749,0,1,0,.288,40.266l5.25,5.5Z"
-                  transform="translate(-26 12.081) rotate(-90)"
-                />
-              </svg>
-            </div>
+            <div class="--arrow-icon--"></div>
           </div>
-          <span
+          <a
+            href="tel:0964534544"
             class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
             >0964534544
-          </span>
+          </a>
         </div>
       </div>
 
       <!-- INTRODUCTION -->
       <!-- INTRODUCTION -->
       <!-- INTRODUCTION -->
-      <div class="flex flex-col items-center justify-center">
+      <div class="flex flex-col items-center justify-center sm:mt-32">
         <span
           class="text-theme-252 light:text-theme-30 text-center text-8xl max-sm:text-6xl"
         >
@@ -760,7 +741,8 @@
         <!-- ALL ABOUT -->
         <div class="w-full pt-1 pb-3 max-sm:px-2 sm:pr-12">
           <span class="text-theme-112 block">All About</span>
-          <span class="text-theme-252 light:text-theme-30"
+          <span
+            class="text-theme-252 light:text-theme-30 inline-block md:w-[70%]"
             >Laravel, JavaScript, UI UX, CSS, WEB DEV, PHP, CMS
           </span>
         </div>
@@ -780,7 +762,7 @@
         <!-- ADDRESS DESKTOP -->
         <!-- ADDRESS DESKTOP -->
         <div
-          class="border-theme-112 light:border-theme-121 w-full border-l-2 pt-1 pb-3 pl-8 max-sm:hidden"
+          class="border-theme-112 light:border-theme-121 hidden w-full border-l-2 pt-1 pb-3 pl-8 md:block"
         >
           <span class="text-theme-112 block">Address</span>
           <!-- ADDRESS GRID -->
@@ -789,44 +771,22 @@
           <div class="grid grid-cols-8 grid-rows-2 items-center gap-y-1">
             <div class="col-span-2 flex items-center justify-between gap-4">
               <span class="text-theme-252 light:text-theme-30">MAIL </span>
-              <div class="">
-                <svg
-                  class="fill-theme-252 light:fill-theme-30 h-3.5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 11.999"
-                >
-                  <path
-                    id="arrow-down"
-                    d="M5.535,45.769a.755.755,0,0,0,1.088,0l5.25-5.5a.749.749,0,1,0-1.084-1.034L6.829,43.378V26.75a.75.75,0,0,0-1.5,0V43.378L1.373,39.231A.749.749,0,1,0,.288,40.266l5.25,5.5Z"
-                    transform="translate(-26 12.081) rotate(-90)"
-                  />
-                </svg>
-              </div>
+              <div class="--arrow-icon--"></div>
             </div>
-            <span
+            <a
+              href="mailto:narobekenea@gmail.com"
               class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
               >narobekenea@gmail.com
-            </span>
+            </a>
             <div class="col-span-2 flex items-center justify-between gap-4">
               <span class="text-theme-252 light:text-theme-30">TEL </span>
-              <div class="">
-                <svg
-                  class="fill-theme-252 light:fill-theme-30 h-3.5"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 11.999"
-                >
-                  <path
-                    id="arrow-down"
-                    d="M5.535,45.769a.755.755,0,0,0,1.088,0l5.25-5.5a.749.749,0,1,0-1.084-1.034L6.829,43.378V26.75a.75.75,0,0,0-1.5,0V43.378L1.373,39.231A.749.749,0,1,0,.288,40.266l5.25,5.5Z"
-                    transform="translate(-26 12.081) rotate(-90)"
-                  />
-                </svg>
-              </div>
+              <div class="--arrow-icon--"></div>
             </div>
-            <span
+            <a
+              href="tel:0964534544"
               class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
               >0964534544
-            </span>
+            </a>
           </div>
         </div>
       </div>
@@ -836,7 +796,8 @@
     <!-- ABOUT -->
     <!-- ABOUT -->
     <div
-      class="flex h-screen justify-center gap-24 py-24 max-sm:flex-col max-sm:justify-start max-sm:px-2 sm:px-8"
+      data-nav="about"
+      class="--section-- --section-about-- flex min-h-screen justify-center gap-24 py-24 max-sm:flex-col max-sm:justify-start max-sm:px-2 sm:px-8"
     >
       <!-- STORY -->
       <!-- STORY -->
@@ -849,11 +810,13 @@
           About Me
         </span>
 
-        <span class="text-theme-222 light:text-theme-30 mt-[15vh] text-center"
-          >I'm a full-stack website developer. Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Eaque nihil natus veritatis. Culpa
-          repellat odit dolores animi saepe? Lorem ipsum dolor sit amet.</span
-        >
+        <span class="text-theme-222 light:text-theme-30 mt-[15vh] text-center">
+          Skilled web developer with strong expertise in Laravel, JavaScript and
+          UI design. Experienced in building responsive, user-friendly web
+          applications, combining back-end functionality with front-end
+          interfaces. Passionate about delivering high-quality, efficient code
+          and creating exceptional user experiences.
+        </span>
       </div>
 
       <!-- EDUCATION -->
@@ -884,7 +847,8 @@
     <!-- TOOLS -->
     <!-- TOOLS -->
     <div
-      class="flex h-screen justify-center gap-24 py-24 max-sm:flex-col max-sm:justify-start max-sm:px-2 sm:px-8"
+      data-nav="tools"
+      class="--section-- --section-tools-- flex min-h-screen justify-center gap-24 py-24 max-sm:flex-col max-sm:justify-start max-sm:px-2 sm:px-8"
     >
       <div class="w-full">
         <!-- HEADLINE -->
@@ -897,399 +861,14 @@
         <!-- TOOLS ITEM -->
         <!-- TOOLS ITEM -->
         <!-- TOOLS ITEM -->
-        <div class="mt-8">
+        <div class="mt-12 sm:mt-24">
           <!-- MARQUEE -->
           <!-- MARQUEE -->
           <!-- MARQUEE -->
           <div
-            class="---marquee--- bg-theme-222 light:bg-theme-30 animate-slide flex flex-nowrap items-center overflow-hidden p-0"
-          >
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> Laravel </span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-          </div>
+            data-name="Laravel"
+            class="--marquee-- bg-theme-222 light:bg-theme-30 animate-slide flex flex-nowrap items-center overflow-hidden p-0"
+          ></div>
           <ul class="mt-4 flex flex-wrap items-start gap-2">
             <li
               class="bg-theme-66 light:bg-theme-181 text-theme-222 light:text-theme-30 inline-block rounded-sm p-0 px-1 text-nowrap"
@@ -1317,399 +896,14 @@
         <!-- TOOLS ITEM -->
         <!-- TOOLS ITEM -->
         <!-- TOOLS ITEM -->
-        <div class="mt-8">
+        <div class="mt-12 sm:mt-24">
           <!-- MARQUEE -->
           <!-- MARQUEE -->
           <!-- MARQUEE -->
           <div
-            class="---marquee--- bg-theme-222 light:bg-theme-30 animate-slide flex flex-nowrap items-center overflow-hidden p-0"
-          >
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-            <!-- MARQUEE ITEM -->
-            <div
-              class="---marquee-item--- ml-1 flex flex-nowrap items-center gap-1"
-            >
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-              <span
-                class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]"
-              >
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-                <span class=""> JavaScript</span>
-                <svg
-                  class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 384 512"
-                >
-                  <path
-                    d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"
-                  />
-                </svg>
-              </span>
-            </div>
-          </div>
+            data-name="JavaScript"
+            class="--marquee-- bg-theme-222 light:bg-theme-30 animate-slide flex flex-nowrap items-center overflow-hidden p-0"
+          ></div>
           <ul class="mt-4 flex flex-wrap items-start gap-2">
             <li
               class="bg-theme-66 light:bg-theme-181 text-theme-222 light:text-theme-30 inline-block rounded-sm p-0 px-1 text-nowrap"
@@ -1736,6 +930,239 @@
       </div>
     </div>
 
+    <!-- PROJECTS -->
+    <!-- PROJECTS -->
+    <!-- PROJECTS -->
+    <div
+      data-nav="projects"
+      class="--section-- --section-projects-- flex min-h-screen flex-col justify-center gap-24 py-24 max-sm:justify-start max-sm:px-2 sm:px-8"
+    >
+      <span class="text-theme-252 light:text-theme-30 -mb-12 block text-5xl">
+        projects
+      </span>
+
+      <!-- PROJECT ITEM -->
+      <!-- PROJECT ITEM -->
+      <!-- PROJECT ITEM -->
+      <div class="flex gap-8 max-sm:flex-col">
+        <div class="sm:w-[60%]">
+          <div class="flex flex-col items-center gap-4">
+            <!-- IMAGE -->
+            <!-- IMAGE -->
+            <!-- IMAGE -->
+            <div class="w-full rounded-xl">
+              <img
+                class="--image-- rounded-xl"
+                src="dist/img/ecom_shot.png"
+                alt=""
+              />
+            </div>
+            <!-- IMAGE PREVIEW -->
+            <!-- IMAGE PREVIEW -->
+            <!-- IMAGE PREVIEW -->
+            <div class="flex items-center gap-4">
+              <div
+                class="--image-preview-- bg-theme-121 h-12 w-12 rounded-sm bg-cover bg-center bg-no-repeat"
+                style="background-image: url(dist/img/ecom_shot.png)"
+                data-src="dist/img/ecom_shot.png"
+              ></div>
+              <div
+                class="--image-preview-- bg-theme-121 h-12 w-12 rounded-sm bg-cover bg-center bg-no-repeat"
+                style="background-image: url(dist/img/Screenshot_8.png)"
+                data-src="dist/img/Screenshot_8.png"
+              ></div>
+              <div
+                class="--image-preview-- bg-theme-121 h-12 w-12 rounded-sm bg-cover bg-center bg-no-repeat"
+                style="background-image: url(dist/img/Screenshot_4.png)"
+                data-src="dist/img/Screenshot_4.png"
+              ></div>
+              <div
+                class="--image-preview-- bg-theme-121 h-12 w-12 rounded-sm bg-cover bg-center bg-no-repeat"
+                style="background-image: url(dist/img/Screenshot_10.png)"
+                data-src="dist/img/Screenshot_10.png"
+              ></div>
+              <div
+                class="--image-preview-- bg-theme-121 h-12 w-12 rounded-sm bg-cover bg-center bg-no-repeat"
+                style="background-image: url(dist/img/Screenshot_3.png)"
+                data-src="dist/img/Screenshot_3.png"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="sm:w-[40%]">
+          <!-- HEAD -->
+          <!-- HEAD -->
+          <!-- HEAD -->
+          <div
+            class="text-theme-252 light:text-theme-30 flex justify-between max-sm:mt-8"
+          >
+            <span class="">store app</span>
+            <a
+              href="https://github.com/narobe/store-app"
+              class="flex items-center gap-2"
+              ><div class="--github-icon--"></div>
+              <span>narobe/store-app</span></a
+            >
+          </div>
+          <!-- DETAIL -->
+          <!-- DETAIL -->
+          <!-- DETAIL -->
+          <div class="mt-4">
+            <span class="text-theme-112"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Exercitationem earum sunt vero tenetur asperiores facilis
+              molestias fugit quasi quibusdam, esse aliquid ea veritatis nobis
+              velit at voluptatum maxime provident voluptatem officiis
+              labore!</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <!-- CONTACT -->
+    <!-- CONTACT -->
+    <div
+      data-nav="contact"
+      class="--section-- --section-contact-- flex min-h-screen justify-center gap-24 py-24 max-sm:flex-col max-sm:justify-start max-sm:px-2 sm:px-8"
+    >
+      <!-- ADDRESS -->
+      <!-- ADDRESS -->
+      <!-- ADDRESS -->
+      <div class="w-full">
+        <div class="w-full">
+          <span class="text-theme-252 light:text-theme-30 mb-6 block text-5xl">
+            Get in touch
+          </span>
+          <span class="text-theme-112 block">Address</span>
+          <!-- ADDRESS GRID -->
+          <!-- ADDRESS GRID -->
+          <!-- ADDRESS GRID -->
+          <div class="grid grid-cols-8 grid-rows-2 items-center gap-y-1">
+            <div class="col-span-2 flex items-center justify-between gap-4">
+              <span class="text-theme-252 light:text-theme-30">MAIL </span>
+              <div class="--arrow-icon--"></div>
+            </div>
+            <a
+              href="mailto:narobekenea@gmail.com"
+              class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
+              >narobekenea@gmail.com
+            </a>
+            <div class="col-span-2 flex items-center justify-between gap-4">
+              <span class="text-theme-252 light:text-theme-30">TEL </span>
+              <div class="--arrow-icon--"></div>
+            </div>
+            <a
+              href="tel:0964534544"
+              class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
+              >0964534544
+            </a>
+            <div class="col-span-2 flex items-center justify-between gap-4">
+              <span class="text-theme-252 light:text-theme-30">TG </span>
+              <div class="--arrow-icon--"></div>
+            </div>
+            <a
+              href="https://t.me/sylenthique"
+              class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
+              >@sylenthique
+            </a>
+            <div class="col-span-2 flex items-center justify-between gap-4">
+              <span class="text-theme-252 light:text-theme-30">GH </span>
+              <div class="--arrow-icon--"></div>
+            </div>
+            <a
+              href="https://github.com/narobe"
+              class="text-theme-252 light:text-theme-30 col-span-6 justify-self-end"
+              >/narobe
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- FORM -->
+      <!-- FORM -->
+      <!-- FORM -->
+      <div class="w-full">
+        <span class="text-theme-252 light:text-theme-30 mb-6 block text-5xl">
+          Your message
+        </span>
+        <form action="">
+          <label class="text-theme-222 light:text-theme-30 mt-4 inline-block"
+            >name</label
+          >
+          <input
+            type="text"
+            class="--form-name-- text-theme-222 light:text-theme-30 border-theme-121 w-full rounded-xl border bg-transparent px-4 py-2"
+          />
+          <label class="text-theme-222 light:text-theme-30 mt-4 inline-block"
+            >email or phone</label
+          >
+          <input
+            type="text"
+            class="--form-name-- text-theme-222 light:text-theme-30 border-theme-121 w-full rounded-xl border bg-transparent px-4 py-2"
+          />
+          <label class="text-theme-222 light:text-theme-30 mt-4 inline-block"
+            >email or phone</label
+          >
+          <textarea
+            type="text"
+            rows="5"
+            class="--form-name-- text-theme-222 light:text-theme-30 border-theme-121 w-full resize-none rounded-xl border bg-transparent px-4 py-2"
+          ></textarea>
+          <button
+            class="bg-theme-222 light:bg-theme-30 light:text-theme-222 text-theme-30 mt-4 w-full rounded-xl p-1"
+          >
+            send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".--marquee--").forEach((el) => {
+        const name = el.dataset.name;
+        const marqueItem = `            
+<div class="--marquee-item-- ml-1 flex flex-nowrap items-center gap-1">
+  <span class="light:text-theme-222 text-theme-30 flex items-center gap-1 text-[1.4rem]">
+    <span class=""> ${name}</span>
+    <div class="--icon-asterisk--"> 
+      <svg
+      class="fill-theme-30 light:fill-theme-222 mx-2 h-4"
+      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"> 
+      <path
+        d="M192 32c17.7 0 32 14.3 32 32V199.5l111.5-66.9c15.2-9.1 34.8-4.2 43.9 11s4.2 34.8-11 43.9L254.2 256l114.3 68.6c15.2 9.1 20.1 28.7 11 43.9s-28.7 20.1-43.9 11L224 312.5V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V312.5L48.5 379.4c-15.2 9.1-34.8 4.2-43.9-11s-4.2-34.8 11-43.9L129.8 256 15.5 187.4c-15.2-9.1-20.1-28.7-11-43.9s28.7-20.1 43.9-11L160 199.5V64c0-17.7 14.3-32 32-32z"/>
+      </svg>
+    </div>
+  </span>
+</div>
+`;
+        const marqueWrap = `${marqueItem} ${marqueItem} ${marqueItem} ${marqueItem} ${marqueItem} ${marqueItem} ${marqueItem} ${marqueItem} ${marqueItem} `;
+        el.innerHTML = `${marqueWrap} ${marqueWrap} ${marqueWrap} ${marqueWrap} `;
+        //
+      });
+      document.querySelectorAll(".--github-icon--").forEach((el) => {
+        el.innerHTML = `
+<svg class="fill-theme-252 light:fill-theme-30 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+  <path
+    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+</svg>`;
+      });
+      document.querySelectorAll(".--arrow-icon--").forEach((el) => {
+        el.innerHTML = `
+                <svg
+                  class="fill-theme-252 light:fill-theme-30 h-3.5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 11.999"
+                >
+                  <path
+                    id="arrow-down"
+                    d="M5.535,45.769a.755.755,0,0,0,1.088,0l5.25-5.5a.749.749,0,1,0-1.084-1.034L6.829,43.378V26.75a.75.75,0,0,0-1.5,0V43.378L1.373,39.231A.749.749,0,1,0,.288,40.266l5.25,5.5Z"
+                    transform="translate(-26 12.081) rotate(-90)"
+                  />
+                </svg>
+`;
+      });
+    </script>
     <script src="./dist/js/nav.js"></script>
     <script src="./dist/js/theme.js"></script>
     <script src="./dist/js/script.js"></script>

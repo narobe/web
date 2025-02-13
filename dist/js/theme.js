@@ -1,5 +1,5 @@
 const themeToggle = document.querySelector(".--themetoggle--");
-// localStorage.theme = "dark_theme";
+localStorage.theme = "dark_theme";
 localStorage.theme == "dark_theme"
   ? (document.documentElement.classList = "dark")
   : (document.documentElement.classList = "light");

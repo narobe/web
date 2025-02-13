@@ -6,7 +6,7 @@ localStorage.theme == "dark_theme"
 
 themeToggle.addEventListener("click", () => {
   document.querySelectorAll("*:not(.no-theme-transition)").forEach((el) => {
-    el.style.transition = "1800ms";
+    el.style.transition = "500ms";
   });
   setTimeout(() => {
     document.querySelectorAll("*:not(.no-theme-transition)").forEach((el) => {

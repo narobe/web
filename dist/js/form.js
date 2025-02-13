@@ -4,7 +4,6 @@ const formAdd = document.querySelector(".--form-address--");
 const formMessage = document.querySelector(".--form-message--");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  console.log(formName.value, formAdd.value, formMessage.value);
   sendMessage();
 });
 

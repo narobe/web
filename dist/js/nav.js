@@ -69,7 +69,7 @@ sections.forEach((section) => {
   }
   const navObserver = new IntersectionObserver(observed, {
     root: null,
-    threshold: 0.5,
+    threshold: 0.35,
   });
   navObserver.observe(section);
 });

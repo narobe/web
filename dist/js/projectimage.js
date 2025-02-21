@@ -33,6 +33,7 @@ function prevImages(imageWrap, ext) {
 }
 prevImages("--store-app--", "jpg");
 prevImages("--we-study--", "jpg");
+prevImages("--task-app--", "png");
 const imagePreview = document.querySelectorAll(".--image-preview--");
 imagePreview.forEach((ip) => {
   ip.addEventListener("click", (e) => {
